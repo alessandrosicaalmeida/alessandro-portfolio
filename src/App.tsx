@@ -1,19 +1,19 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CareerTimeline } from "./components/CareerTimeline";
 import { projects, statusCopy, type Language, type Project } from "./data/projects";
 
 const ui = {
   en: {
     nav: ["Work", "Evidence", "Trajectory", "Contact"],
-    heroKicker: "INVENTION Â· TRANSFORMATION Â· AI",
+    heroKicker: "INVENTION · TRANSFORMATION · AI",
     heroTitle: "Creativity and vision, using AI to solve complex problems with agility and control.",
     heroBody: "For more than 20 years, I have found the pattern others missed, shaped original solutions, and led people, products, data, and technology to make them real.",
     explore: "Explore selected work",
-    resume: "Download rÃ©sumÃ©",
+    resume: "Download résumé",
     verified: "A career built around difficult problems",
     mapped: "years creating systems across operations, product, data, and AI",
     flagships: "solutions mapped across enterprise transformation and new ventures",
-    based: "Tampa Bay Â· United States",
+    based: "Tampa Bay · United States",
     flagship: "Flagship case",
     signingTitle: "SigningLab: predictive intelligence for football recruitment decisions.",
     signingBody: "I created SigningLab to make football recruitment decisions more transparent. Its public website and published iOS app put league-specific intelligence, rankings, and pre-outcome forecasts in users' hands.",
@@ -65,65 +65,65 @@ const ui = {
     footer: "Built as a living evidence system. Last audited September 2026.",
   },
   pt: {
-    nav: ["Projetos", "EvidÃªncias", "TrajetÃ³ria", "Contato"],
-    heroKicker: "INVENÃ‡ÃƒO Â· TRANSFORMAÃ‡ÃƒO Â· IA",
-    heroTitle: "Criatividade e visÃ£o utilizando IA na soluÃ§Ã£o Ã¡gil e segura para problemas complexos.",
-    heroBody: "HÃ¡ mais de 20 anos, encontro o padrÃ£o que outros nÃ£o perceberam, desenho soluÃ§Ãµes originais e lidero pessoas, produtos, dados e tecnologia para tornÃ¡-las realidade.",
+    nav: ["Projetos", "Evidências", "Trajetória", "Contato"],
+    heroKicker: "INVENÇÃO · TRANSFORMAÇÃO · IA",
+    heroTitle: "Criatividade e visão utilizando IA na solução ágil e segura para problemas complexos.",
+    heroBody: "Há mais de 20 anos, encontro o padrão que outros não perceberam, desenho soluções originais e lidero pessoas, produtos, dados e tecnologia para torná-las realidade.",
     explore: "Explorar projetos selecionados",
-    resume: "Baixar currÃ­culo",
-    verified: "Uma carreira construÃ­da em torno de problemas difÃ­ceis",
-    mapped: "anos criando sistemas em operaÃ§Ãµes, produto, dados e IA",
-    flagships: "soluÃ§Ãµes mapeadas entre transformaÃ§Ã£o empresarial e novos negÃ³cios",
-    based: "Tampa Bay Â· Estados Unidos",
+    resume: "Baixar currículo",
+    verified: "Uma carreira construída em torno de problemas difíceis",
+    mapped: "anos criando sistemas em operações, produto, dados e IA",
+    flagships: "soluções mapeadas entre transformação empresarial e novos negócios",
+    based: "Tampa Bay · Estados Unidos",
     flagship: "Projeto principal",
-    signingTitle: "SigningLab: inteligÃªncia preditiva para decisÃµes de contrataÃ§Ã£o no futebol.",
-    signingBody: "Criei a SigningLab para tornar decisÃµes de contrataÃ§Ã£o no futebol mais transparentes. O site pÃºblico e o app publicado para iOS levam aos usuÃ¡rios inteligÃªncia por liga, rankings e previsÃµes registradas antes dos resultados.",
+    signingTitle: "SigningLab: inteligência preditiva para decisões de contratação no futebol.",
+    signingBody: "Criei a SigningLab para tornar decisões de contratação no futebol mais transparentes. O site público e o app publicado para iOS levam aos usuários inteligência por liga, rankings e previsões registradas antes dos resultados.",
     leagues: "ligas",
     publishedCases: "casos publicados",
     lift: "ganho em sucesso estrito",
-    publicArtifact: "Artefato pÃºblico de metodologia",
-    leadershipTitle: "Abordagem de lideranÃ§a: da definiÃ§Ã£o do problema Ã  implementaÃ§Ã£o.",
-    leadershipBody: "Atuo onde o problema Ã© ambÃ­guo, o modelo existente parou de funcionar e avanÃ§ar exige invenÃ§Ã£o e execuÃ§Ã£o.",
-    leadershipKicker: "01 / PADRÃƒO DE LIDERANÃ‡A",
+    publicArtifact: "Artefato público de metodologia",
+    leadershipTitle: "Abordagem de liderança: da definição do problema à implementação.",
+    leadershipBody: "Atuo onde o problema é ambíguo, o modelo existente parou de funcionar e avançar exige invenção e execução.",
+    leadershipKicker: "01 / PADRÃO DE LIDERANÇA",
     leadershipPillars: [
-      ["01", "Reformular o problema", "Encontrar a restriÃ§Ã£o estrutural por trÃ¡s do sintoma visÃ­vel e transformar ambiguidade em uma direÃ§Ã£o acionÃ¡vel."],
-      ["02", "Inventar o sistema", "Combinar desenho de negÃ³cio, dados, IA, produto e visÃ£o operacional em uma soluÃ§Ã£o que antes nÃ£o existia."],
-      ["03", "Mobilizar a realidade", "Alinhar equipes, parceiros, governanÃ§a e execuÃ§Ã£o em torno de resultados, aprendendo com evidÃªncias e adaptando a rota."],
+      ["01", "Reformular o problema", "Encontrar a restrição estrutural por trás do sintoma visível e transformar ambiguidade em uma direção acionável."],
+      ["02", "Inventar o sistema", "Combinar desenho de negócio, dados, IA, produto e visão operacional em uma solução que antes não existia."],
+      ["03", "Mobilizar a realidade", "Alinhar equipes, parceiros, governança e execução em torno de resultados, aprendendo com evidências e adaptando a rota."],
     ],
-    projectsTitle: "SoluÃ§Ãµes criadas em negÃ³cios, dados e IA.",
-    projectsBody: "Cada caso mostra um problema real, o sistema criado para enfrentÃ¡-lo, a lideranÃ§a de Alessandro e as evidÃªncias disponÃ­veis hoje.",
-    capabilityKicker: "03 / CAPACIDADE TÃ‰CNICA",
+    projectsTitle: "Soluções criadas em negócios, dados e IA.",
+    projectsBody: "Cada caso mostra um problema real, o sistema criado para enfrentá-lo, a liderança de Alessandro e as evidências disponíveis hoje.",
+    capabilityKicker: "03 / CAPACIDADE TÉCNICA",
     capabilityTitle: "Capacidades de arquitetura e IA comprovadas por sistemas reais.",
-    capabilityBody: "O portfÃ³lio Ã© organizado por resultados de negÃ³cio, enquanto este mapa torna explÃ­cita a profundidade tÃ©cnica. Itens planejados sÃ£o identificados e nunca apresentados como evidÃªncia concluÃ­da.",
-    portfolioKicker: "04 / PORTFÃ“LIO DE SOLUÃ‡Ã•ES",
+    capabilityBody: "O portfólio é organizado por resultados de negócio, enquanto este mapa torna explícita a profundidade técnica. Itens planejados são identificados e nunca apresentados como evidência concluída.",
+    portfolioKicker: "04 / PORTFÓLIO DE SOLUÇÕES",
     disclosureKicker: "05 / RESPONSABILIDADE",
     contactKicker: "06 / CONTATO",
     all: "Todos",
     core: "Destaques",
     supporting: "Complementares",
-    archive: "Arquivo e evidÃªncias",
+    archive: "Arquivo e evidências",
     view: "Inspecionar caso",
-    proof: "O que estÃ¡ comprovado",
-    role: "LideranÃ§a e responsabilidade",
+    proof: "O que está comprovado",
+    role: "Liderança e responsabilidade",
     problem: "Problema e contexto",
     operation: "Como o sistema funciona",
-    decisions: "DecisÃµes principais",
+    decisions: "Decisões principais",
     capabilities: "Capacidades demonstradas",
     technologies: "Tecnologias",
     learnings: "Aprendizados",
-    boundary: "Limite da demonstraÃ§Ã£o pÃºblica",
-    visualPlan: "Como o projeto serÃ¡ demonstrado",
-    next: "PrÃ³ximos passos",
-    capabilityStatus: { implemented: "Implementado", prototype: "ProtÃ³tipo", planned: "Planejado" },
-    stage: "EstÃ¡gio da soluÃ§Ã£o",
+    boundary: "Limite da demonstração pública",
+    visualPlan: "Como o projeto será demonstrado",
+    next: "Próximos passos",
+    capabilityStatus: { implemented: "Implementado", prototype: "Protótipo", planned: "Planejado" },
+    stage: "Estágio da solução",
     close: "Fechar caso",
-    methodsTitle: "EvidÃªncias, escopo e maturidade atual.",
-    methodsBody: "Cada case deixa claro o problema, minha lideranÃ§a, o que existe hoje e o que pode ser verificado de forma independente. Produtos ativos, protÃ³tipos, pesquisas e sistemas empresariais sÃ£o apresentados exatamente pelo que sÃ£o.",
-    contactTitle: "LideranÃ§a executiva em IA, produto e transformaÃ§Ã£o.",
-    contactBody: "Estou avaliando posiÃ§Ãµes executivas e de lideranÃ§a sÃªnior nas quais o desafio Ã© relevante, o caminho nÃ£o Ã© Ã³bvio e um novo sistema precisa ser inventado e conduzido atÃ© a realidade.",
+    methodsTitle: "Evidências, escopo e maturidade atual.",
+    methodsBody: "Cada case deixa claro o problema, minha liderança, o que existe hoje e o que pode ser verificado de forma independente. Produtos ativos, protótipos, pesquisas e sistemas empresariais são apresentados exatamente pelo que são.",
+    contactTitle: "Liderança executiva em IA, produto e transformação.",
+    contactBody: "Estou avaliando posições executivas e de liderança sênior nas quais o desafio é relevante, o caminho não é óbvio e um novo sistema precisa ser inventado e conduzido até a realidade.",
     email: "Iniciar uma conversa",
     github: "Perfil no GitHub",
-    footer: "ConstruÃ­do como um sistema vivo de evidÃªncias. Ãšltima auditoria: setembro de 2026.",
+    footer: "Construído como um sistema vivo de evidências. Última auditoria: setembro de 2026.",
   },
 } as const;
 
@@ -131,43 +131,43 @@ const capabilityDomains = [
   {
     code: "01",
     title: { en: "Data engineering, ETL, and machine learning", pt: "Engenharia de dados, ETL e machine learning" },
-    body: { en: "Production and research pipelines, data-quality control, predictive models, pricing, temporal validation, and reproducible analytics.", pt: "Pipelines de produÃ§Ã£o e pesquisa, controle de qualidade, modelos preditivos, precificaÃ§Ã£o, validaÃ§Ã£o temporal e analytics reproduzÃ­veis." },
+    body: { en: "Production and research pipelines, data-quality control, predictive models, pricing, temporal validation, and reproducible analytics.", pt: "Pipelines de produção e pesquisa, controle de qualidade, modelos preditivos, precificação, validação temporal e analytics reproduzíveis." },
     projects: ["signinglab", "enose", "retail-intelligence", "legacy-systems"],
   },
   {
     code: "02",
-    title: { en: "RAG, vectorization, and grounded retrieval", pt: "RAG, vetorizaÃ§Ã£o e recuperaÃ§Ã£o contextualizada" },
-    body: { en: "Implemented in SigningLab's proprietary AI model; semantic retrieval is also present in Inflick. Controlled RAG cases for migration and operating knowledge are explicitly planned, not claimed as complete.", pt: "Implementado no modelo proprietÃ¡rio de IA da SigningLab; recuperaÃ§Ã£o semÃ¢ntica tambÃ©m estÃ¡ presente na Inflick. Cases controlados de RAG para migraÃ§Ã£o e conhecimento operacional estÃ£o explicitamente planejados, nÃ£o apresentados como concluÃ­dos." },
+    title: { en: "RAG, vectorization, and grounded retrieval", pt: "RAG, vetorização e recuperação contextualizada" },
+    body: { en: "Implemented in SigningLab's proprietary AI model; semantic retrieval is also present in Inflick. Controlled RAG cases for migration and operating knowledge are explicitly planned, not claimed as complete.", pt: "Implementado no modelo proprietário de IA da SigningLab; recuperação semântica também está presente na Inflick. Cases controlados de RAG para migração e conhecimento operacional estão explicitamente planejados, não apresentados como concluídos." },
     projects: ["signinglab", "inflick", "lea-command-center", "control-biz"],
   },
   {
     code: "03",
-    title: { en: "Multi-agent systems and orchestration", pt: "Sistemas multiagente e orquestraÃ§Ã£o" },
-    body: { en: "Specialist roles, parallel rounds, structured handoffs, mission engines, tool routing, bounded autonomy, and human decision gates.", pt: "PapÃ©is especialistas, rodadas paralelas, passagens estruturadas, motores de missÃ£o, roteamento de ferramentas, autonomia delimitada e decisÃµes humanas." },
+    title: { en: "Multi-agent systems and orchestration", pt: "Sistemas multiagente e orquestração" },
+    body: { en: "Specialist roles, parallel rounds, structured handoffs, mission engines, tool routing, bounded autonomy, and human decision gates.", pt: "Papéis especialistas, rodadas paralelas, passagens estruturadas, motores de missão, roteamento de ferramentas, autonomia delimitada e decisões humanas." },
     projects: ["control-biz", "last-myth", "lea-command-center", "ai-parts"],
   },
   {
     code: "04",
-    title: { en: "Agent audit, governance, and cost control", pt: "Auditoria de agentes, governanÃ§a e controle de custos" },
-    body: { en: "Traceable actions, isolated context, approval and revision states, audit logs, model routing, token controls, and responsible evidence boundaries.", pt: "AÃ§Ãµes rastreÃ¡veis, contexto isolado, estados de aprovaÃ§Ã£o e revisÃ£o, logs de auditoria, roteamento de modelos, controles de tokens e limites responsÃ¡veis de evidÃªncia." },
+    title: { en: "Agent audit, governance, and cost control", pt: "Auditoria de agentes, governança e controle de custos" },
+    body: { en: "Traceable actions, isolated context, approval and revision states, audit logs, model routing, token controls, and responsible evidence boundaries.", pt: "Ações rastreáveis, contexto isolado, estados de aprovação e revisão, logs de auditoria, roteamento de modelos, controles de tokens e limites responsáveis de evidência." },
     projects: ["control-biz", "last-myth", "ai-parts", "signinglab"],
   },
   {
     code: "05",
-    title: { en: "Process automation and operating-cost reduction", pt: "AutomaÃ§Ã£o e reduÃ§Ã£o de custos operacionais" },
-    body: { en: "Systems that coordinate scarce capacity, remove repetitive work, prioritize decisions, and connect automation to measurable operating outcomes.", pt: "Sistemas que coordenam capacidade escassa, eliminam trabalho repetitivo, priorizam decisÃµes e conectam automaÃ§Ã£o a resultados operacionais mensurÃ¡veis." },
+    title: { en: "Process automation and operating-cost reduction", pt: "Automação e redução de custos operacionais" },
+    body: { en: "Systems that coordinate scarce capacity, remove repetitive work, prioritize decisions, and connect automation to measurable operating outcomes.", pt: "Sistemas que coordenam capacidade escassa, eliminam trabalho repetitivo, priorizam decisões e conectam automação a resultados operacionais mensuráveis." },
     projects: ["legacy-systems", "control-biz", "last-myth", "minha-secretaria"],
   },
   {
     code: "06",
-    title: { en: "Analytics and data visualization", pt: "Analytics e visualizaÃ§Ã£o de dados" },
-    body: { en: "Executive dashboards, operational drilldowns, model evidence, geographic intelligence, risk views, and decision-oriented reporting.", pt: "Dashboards executivos, detalhamento operacional, evidÃªncia de modelos, inteligÃªncia geogrÃ¡fica, visÃµes de risco e relatÃ³rios orientados Ã  decisÃ£o." },
+    title: { en: "Analytics and data visualization", pt: "Analytics e visualização de dados" },
+    body: { en: "Executive dashboards, operational drilldowns, model evidence, geographic intelligence, risk views, and decision-oriented reporting.", pt: "Dashboards executivos, detalhamento operacional, evidência de modelos, inteligência geográfica, visões de risco e relatórios orientados à decisão." },
     projects: ["retail-intelligence", "signinglab", "enose", "ai-parts", "legacy-systems"],
   },
   {
     code: "07",
-    title: { en: "Computer vision and realtime AI", pt: "VisÃ£o computacional e IA em tempo real" },
-    body: { en: "Local facial mapping, GPU image processing, character motion, sports-vision signals, realtime audio, and streaming interaction.", pt: "Mapeamento facial local, tratamento de imagem em GPU, movimento de personagem, sinais visuais esportivos, Ã¡udio em tempo real e interaÃ§Ã£o por streaming." },
+    title: { en: "Computer vision and realtime AI", pt: "Visão computacional e IA em tempo real" },
+    body: { en: "Local facial mapping, GPU image processing, character motion, sports-vision signals, realtime audio, and streaming interaction.", pt: "Mapeamento facial local, tratamento de imagem em GPU, movimento de personagem, sinais visuais esportivos, áudio em tempo real e interação por streaming." },
     projects: ["effigia", "signinglab", "intvox"],
   },
 ] as const;
@@ -193,7 +193,7 @@ function ProjectDetail({ project, lang, onClose }: { project: Project; lang: Lan
     <div className="case-shell" role="dialog" aria-modal="true" aria-labelledby="case-title">
       <button className="case-backdrop" onClick={onClose} aria-label={ui[lang].close} />
       <article className="case-panel">
-        <button className="case-close" onClick={onClose}>{ui[lang].close} <span aria-hidden="true">Ã—</span></button>
+        <button className="case-close" onClick={onClose}>{ui[lang].close} <span aria-hidden="true">×</span></button>
         <div className="case-grid">
           <header className="case-header">
             <div className="project-meta"><span>{project.year}</span><span>{project.category[lang]}</span></div>
@@ -202,7 +202,7 @@ function ProjectDetail({ project, lang, onClose }: { project: Project; lang: Lan
             <div className="case-status">
               <span className={`status-dot ${project.status}`} />
               <span>{ui[lang].stage}: {project.stage[lang]}</span>
-              <span>Â·</span>
+              <span>·</span>
               <span>{statusCopy[project.status][lang]}</span>
             </div>
           </header>
@@ -348,7 +348,7 @@ export default function App() {
             <div className="metric-strip">
               <div><strong>21</strong><span>{copy.leagues}</span></div>
               <div><strong>8,559</strong><span>{copy.publishedCases}</span></div>
-              <div><strong>1.85Ã—</strong><span>{copy.lift}</span></div>
+              <div><strong>1.85×</strong><span>{copy.lift}</span></div>
             </div>
             <button className="text-action" onClick={() => openProject(projects[0])}>{copy.view} <ArrowIcon /></button>
           </div>
@@ -432,7 +432,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer><span>Â© 2026 Alessandro Luiz Sica De Almeida</span><span>{copy.footer}</span></footer>
+      <footer><span>© 2026 Alessandro Luiz Sica De Almeida</span><span>{copy.footer}</span></footer>
       {selected && <ProjectDetail project={selected} lang={lang} onClose={closeProject} />}
     </>
   );
