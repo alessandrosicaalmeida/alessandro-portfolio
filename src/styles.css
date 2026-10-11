@@ -61,6 +61,12 @@ h1 { max-width: 1140px; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); font-size: cl
 .evidence-number span, .hero-location { color: var(--muted); font-size: .8rem; line-height: 1.4; text-transform: uppercase; letter-spacing: .06em; }
 .hero-location { padding-top: 1.25rem; border-top: 1px solid var(--line); }
 
+.letter { display: grid; grid-template-columns: 5fr 7fr; border-inline: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); }
+.letter > header { padding: clamp(3rem, 6vw, 6rem); align-self: start; }
+.letter h2 { font-size: clamp(2rem, 3.6vw, 3.8rem); line-height: 1; letter-spacing: -.045em; text-wrap: balance; }
+.letter-body { padding: clamp(3rem, 6vw, 6rem); padding-left: 0; max-width: 780px; }
+.letter-body p { margin: 0 0 1.4rem; color: var(--paper); font-size: 1.08rem; line-height: 1.75; }
+.letter-body .letter-sign { margin-top: 2rem; color: var(--amber); font-weight: 700; }
 .leadership-spine { display: grid; grid-template-columns: 5fr 7fr; border-inline: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper); color: var(--ink); }
 .leadership-spine > header { padding: clamp(3rem, 6vw, 6rem); align-self: center; }
 .leadership-spine .eyebrow { color: #9b5d00; }
@@ -286,7 +292,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .hero { grid-template-columns: 1fr; }
   .hero-evidence { display: grid; grid-template-columns: repeat(2, 1fr); border-left: 0; border-top: 1px solid var(--line); }
   .hero-evidence .section-label, .hero-location { grid-column: 1 / -1; }
-  .leadership-spine, .flagship, .trajectory, .methods { grid-template-columns: 1fr; }
+  .letter, .leadership-spine, .flagship, .trajectory, .methods { grid-template-columns: 1fr; }
   .leadership-sequence { border-left: 0; border-top: 1px solid #c8c4b9; }
   .flagship-media, .methods-mark { border-left: 0; border-right: 0; border-top: 1px solid var(--line); }
   .section-intro { grid-template-columns: 1fr; }
@@ -320,6 +326,8 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .hero-evidence { padding: 1.25rem; }
   .flagship-copy, .trajectory-title, .methods-copy, .contact { padding: 3.5rem 1.25rem; }
   .leadership-spine > header { padding: 3.5rem 1.25rem; }
+  .letter > header { padding: 3.5rem 1.25rem 1rem; }
+  .letter-body { padding: 1rem 1.25rem 3.5rem; }
   .leadership-sequence article { grid-template-columns: 48px 1fr; gap: 1rem; padding: 1.75rem 1.25rem; }
   .leadership-sequence article p { grid-column: 2; }
   .metric-strip { grid-template-columns: 1fr; }

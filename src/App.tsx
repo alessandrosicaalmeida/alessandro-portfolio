@@ -21,6 +21,13 @@ const ui = {
     publishedCases: "published cases",
     lift: "strict-success lift",
     publicArtifact: "Public methodology artifact",
+    letterKicker: "A NOTE BEFORE THE WORK",
+    letterTitle: "Twenty years as a generalist. Now with AI as leverage.",
+    letterBody: [
+      "I am an executive with more than twenty years across marketing, strategy, technology, infrastructure, and data. I have always grown fastest as a generalist: understanding how every part of a company works and helping each one move. Along the way I built several departments from scratch, took part in congresses, committees, and large partnerships for clients of international relevance, and delivered work in Brazil, Portugal, Argentina, and Italy. What has changed is leverage. The development teams I once had to assemble, I can now extend with AI. I design and build working systems myself, with people firmly in command of the decisions and AI providing the tools and systems that make those decisions better, more assertive, and faster.",
+      "AI is not new to me. I started in CRM, moved through project management, systems and database architecture, mathematical models and regression, taught the subject at graduate level, and then moved into machine learning. In 2017 we founded a technology company whose operating arm already developed AI and Big Data models for business, and later I founded a company for enterprise solutions with technology and AI. When I saw how fast the field was moving, I made a deliberate decision: pause my businesses, return to study an M.S. in AI and Business Analytics at the University of South Florida, and give that time my full attention, alongside time with my family. That year of study became a year of building, and the cases below are the result: a published football-intelligence product, computer-vision labs, and applied research. I am looking for the next team to join and, where it fits, to lead, bringing experience, creativity, energy, and a habit of delivering.",
+    ],
+    letterSign: "Alessandro Almeida",
     leadershipTitle: "Leadership approach: from problem definition to implementation.",
     leadershipBody: "I enter where the problem is ambiguous, the existing model has stopped working, and progress requires both invention and execution.",
     leadershipKicker: "01 / LEADERSHIP PATTERN",
@@ -82,6 +89,13 @@ const ui = {
     publishedCases: "casos publicados",
     lift: "ganho em sucesso estrito",
     publicArtifact: "Artefato público de metodologia",
+    letterKicker: "UMA NOTA ANTES DOS PROJETOS",
+    letterTitle: "Vinte anos como generalista. Agora com a IA como alavanca.",
+    letterBody: [
+      "Sou um executivo com mais de vinte anos de experiência em marketing, estratégia, tecnologia, infraestrutura e dados. Sempre cresci rápido como generalista: entendendo como cada área de uma empresa funciona e ajudando todas a avançar. Ao longo do caminho, criei vários departamentos do zero, participei de congressos, comitês e parcerias de grande porte para clientes de relevância internacional e entreguei projetos no Brasil, em Portugal, na Argentina e na Itália. O que mudou foi a alavanca. As equipes de desenvolvimento que eu precisava montar, hoje consigo estender com IA. Eu mesmo desenho e construo sistemas funcionais, com as pessoas no comando das decisões e a IA oferecendo ferramentas e sistemas que tornam essas decisões melhores, mais assertivas e mais rápidas.",
+      "A IA não é novidade para mim. Comecei em sistemas de CRM, passei por gestão de projetos, arquitetura de sistemas e bancos de dados, modelos matemáticos e regressões, lecionei a disciplina na pós-graduação e depois avancei para machine learning. Em 2017 fundamos uma empresa de tecnologia cujo braço operacional já desenvolvia modelos de IA e Big Data para negócios e, mais tarde, fundei uma empresa de soluções empresariais com tecnologia e IA. Ao perceber a velocidade do campo, tomei uma decisão deliberada: pausar meus negócios, voltar a estudar em um mestrado em IA e Business Analytics na University of South Florida e dedicar esse período integralmente a isso, ao lado do tempo com minha família. Esse ano de estudo virou um ano de construção, e os cases abaixo são o resultado: um produto publicado de inteligência para o futebol, laboratórios de visão computacional e pesquisa aplicada. Busco o próximo time para integrar e, quando fizer sentido, liderar, trazendo experiência, criatividade, energia e o hábito de entregar.",
+    ],
+    letterSign: "Alessandro Almeida",
     leadershipTitle: "Abordagem de liderança: da definição do problema à implementação.",
     leadershipBody: "Atuo onde o problema é ambíguo, o modelo existente parou de funcionar e avançar exige invenção e execução.",
     leadershipKicker: "01 / PADRÃO DE LIDERANÇA",
@@ -321,6 +335,17 @@ export default function App() {
             <div className="evidence-number"><strong>{projects.length}</strong><span>{copy.flagships}</span></div>
             <div className="hero-location">{copy.based}</div>
           </aside>
+        </section>
+
+        <section className="letter" id="letter" aria-labelledby="letter-title">
+          <header>
+            <p className="eyebrow">{copy.letterKicker}</p>
+            <h2 id="letter-title">{copy.letterTitle}</h2>
+          </header>
+          <div className="letter-body">
+            {copy.letterBody.map((paragraph) => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}
+            <p className="letter-sign">{copy.letterSign}</p>
+          </div>
         </section>
 
         <section className="leadership-spine" aria-labelledby="leadership-title">
