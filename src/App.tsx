@@ -23,9 +23,11 @@ const ui = {
     publicArtifact: "Public methodology artifact",
     letterKicker: "A NOTE BEFORE THE WORK",
     letterTitle: "Twenty years as a generalist. Now with AI as leverage.",
+    letterLead: "20+ years across strategy, technology, and data. Now building AI systems where people stay in command of the decisions.",
     letterBody: [
-      "I am an executive with more than twenty years across marketing, strategy, technology, infrastructure, and data. I have always grown fastest as a generalist: understanding how every part of a company works and helping each one move. Along the way I built several departments from scratch, took part in congresses, committees, and large partnerships for clients of international relevance, and delivered work in Brazil, Portugal, Argentina, and Italy. What has changed is leverage. The development teams I once had to assemble, I can now extend with AI. I design and build working systems myself, with people firmly in command of the decisions and AI providing the tools and systems that make those decisions better, more assertive, and faster.",
-      "AI is not new to me. I started in CRM, moved through project management, systems and database architecture, mathematical models and regression, taught the subject at graduate level, and then moved into machine learning. In 2017 we founded a technology company whose operating arm already developed AI and Big Data models for business, and later I founded a company for enterprise solutions with technology and AI. When I saw how fast the field was moving, I made a deliberate decision: pause my businesses, return to study an M.S. in AI and Business Analytics at the University of South Florida, and give that time my full attention, alongside time with my family. That year of study became a year of building, and the cases below are the result: a published football-intelligence product, computer-vision labs, and applied research. I am looking for a team where I can contribute my best and put AI solutions, projects, and transformation into practice, bringing experience, creativity, energy, and a habit of delivering.",
+      "I am an executive with more than twenty years across marketing, strategy, technology, infrastructure, and data. I grew fast as a generalist, understanding how every part of a company works and helping each one move. I built several departments from scratch and delivered large programs and partnerships for clients such as Vivo, TIM, Telefónica, Itaú, Santander, and Serasa Experian, in Brazil, Portugal, Argentina, and Italy. What has changed is leverage: the development teams I once had to assemble, I can now extend with AI. I design and build working systems myself, with people in command of the decisions and AI providing the tools that make those decisions better, more assertive, and faster.",
+      "AI is not new to me. I started in CRM, moved through project management, systems and database architecture, and mathematical models and regression. I taught predictive strategy, ROI, segmentation, and audience targeting at graduate level, then moved into machine learning. In 2017 we founded a technology company whose operating arm already developed AI and Big Data models for business, and later I founded a company for enterprise solutions with technology and AI.",
+      "When I saw how fast the field was moving, I made a deliberate decision: pause my businesses and return to study an M.S. in AI and Business Analytics at the University of South Florida, giving that time my full attention, alongside time with my family. That year of study became a year of building, and the cases below are the result: a published football-intelligence product, computer-vision labs, and applied research. I am looking for a team where I can contribute my best and put AI solutions, projects, and transformation into practice, bringing experience, creativity, energy, and a habit of delivering.",
     ],
     letterSign: "Alessandro Almeida",
     leadershipTitle: "Leadership approach: from problem definition to implementation.",
@@ -65,8 +67,8 @@ const ui = {
     close: "Close case",
     methodsTitle: "Evidence, scope, and current maturity.",
     methodsBody: "Each case makes the boundary clear: the problem, my leadership, what exists today, and what can be independently inspected. Live products, prototypes, research, and enterprise systems are presented for what they are.",
-    contactTitle: "Executive leadership for AI, product, and transformation.",
-    contactBody: "I am exploring executive and senior leadership roles where the challenge is consequential, the path is not obvious, and a new system must be invented and led into reality.",
+    contactTitle: "Senior roles in AI, product, and data transformation.",
+    contactBody: "I am looking for senior roles where I can lead or contribute hands-on, putting AI solutions into practice with people in command of the decisions. I bring 20+ years across strategy, technology, and data, and a year of building AI systems end to end.",
     email: "Start a conversation",
     github: "GitHub profile",
     footer: "Built as a living evidence system. Last audited September 2026.",
@@ -91,9 +93,11 @@ const ui = {
     publicArtifact: "Artefato público de metodologia",
     letterKicker: "UMA NOTA ANTES DOS PROJETOS",
     letterTitle: "Vinte anos como generalista. Agora com a IA como alavanca.",
+    letterLead: "20+ anos em estratégia, tecnologia e dados. Hoje construindo sistemas de IA em que as pessoas continuam no comando das decisões.",
     letterBody: [
-      "Sou um executivo com mais de vinte anos de experiência em marketing, estratégia, tecnologia, infraestrutura e dados. Sempre cresci rápido como generalista: entendendo como cada área de uma empresa funciona e ajudando todas a avançar. Ao longo do caminho, criei vários departamentos do zero, participei de congressos, comitês e parcerias de grande porte para clientes de relevância internacional e entreguei projetos no Brasil, em Portugal, na Argentina e na Itália. O que mudou foi a alavanca. As equipes de desenvolvimento que eu precisava montar, hoje consigo estender com IA. Eu mesmo desenho e construo sistemas funcionais, com as pessoas no comando das decisões e a IA oferecendo ferramentas e sistemas que tornam essas decisões melhores, mais assertivas e mais rápidas.",
-      "A IA não é novidade para mim. Comecei em sistemas de CRM, passei por gestão de projetos, arquitetura de sistemas e bancos de dados, modelos matemáticos e regressões, lecionei a disciplina na pós-graduação e depois avancei para machine learning. Em 2017 fundamos uma empresa de tecnologia cujo braço operacional já desenvolvia modelos de IA e Big Data para negócios e, mais tarde, fundei uma empresa de soluções empresariais com tecnologia e IA. Ao perceber a velocidade do campo, tomei uma decisão deliberada: pausar meus negócios, voltar a estudar em um mestrado em IA e Business Analytics na University of South Florida e dedicar esse período integralmente a isso, ao lado do tempo com minha família. Esse ano de estudo virou um ano de construção, e os cases abaixo são o resultado: um produto publicado de inteligência para o futebol, laboratórios de visão computacional e pesquisa aplicada. Busco um time em que eu possa colaborar com o meu melhor e colocar soluções, projetos e transformação de IA em prática, trazendo experiência, criatividade, energia e o hábito de entregar.",
+      "Sou um executivo com mais de vinte anos de experiência em marketing, estratégia, tecnologia, infraestrutura e dados. Cresci rápido como generalista, entendendo como cada área de uma empresa funciona e ajudando todas a avançar. Criei vários departamentos do zero e entreguei grandes programas e parcerias para clientes como Vivo, TIM, Telefónica, Itaú, Santander e Serasa Experian, no Brasil, em Portugal, na Argentina e na Itália. O que mudou foi a alavanca: as equipes de desenvolvimento que eu precisava montar, hoje consigo estender com IA. Eu mesmo desenho e construo sistemas funcionais, com as pessoas no comando das decisões e a IA oferecendo as ferramentas que tornam essas decisões melhores, mais assertivas e mais rápidas.",
+      "A IA não é novidade para mim. Comecei em sistemas de CRM e passei por gestão de projetos, arquitetura de sistemas e bancos de dados, modelos matemáticos e regressões. Lecionei predição, ROI, segmentação e identificação de público-alvo na pós-graduação e depois avancei para machine learning. Em 2017 fundamos uma empresa de tecnologia cujo braço operacional já desenvolvia modelos de IA e Big Data para negócios e, mais tarde, fundei uma empresa de soluções empresariais com tecnologia e IA.",
+      "Ao perceber a velocidade do campo, tomei uma decisão deliberada: pausar meus negócios e voltar a estudar em um mestrado em IA e Business Analytics na University of South Florida, dedicando esse período integralmente a isso, ao lado do tempo com minha família. Esse ano de estudo virou um ano de construção, e os cases abaixo são o resultado: um produto publicado de inteligência para o futebol, laboratórios de visão computacional e pesquisa aplicada. Busco um time em que eu possa colaborar com o meu melhor e colocar soluções, projetos e transformação de IA em prática, trazendo experiência, criatividade, energia e o hábito de entregar.",
     ],
     letterSign: "Alessandro Almeida",
     leadershipTitle: "Abordagem de liderança: da definição do problema à implementação.",
@@ -133,8 +137,8 @@ const ui = {
     close: "Fechar caso",
     methodsTitle: "Evidências, escopo e maturidade atual.",
     methodsBody: "Cada case deixa claro o problema, minha liderança, o que existe hoje e o que pode ser verificado de forma independente. Produtos ativos, protótipos, pesquisas e sistemas empresariais são apresentados exatamente pelo que são.",
-    contactTitle: "Liderança executiva em IA, produto e transformação.",
-    contactBody: "Estou avaliando posições executivas e de liderança sênior nas quais o desafio é relevante, o caminho não é óbvio e um novo sistema precisa ser inventado e conduzido até a realidade.",
+    contactTitle: "Posições sêniores em IA, produto e transformação de dados.",
+    contactBody: "Busco posições sêniores em que eu possa liderar ou contribuir diretamente, colocando soluções de IA em prática com as pessoas no comando das decisões. Trago mais de 20 anos em estratégia, tecnologia e dados e um ano construindo sistemas de IA de ponta a ponta.",
     email: "Iniciar uma conversa",
     github: "Perfil no GitHub",
     footer: "Construído como um sistema vivo de evidências. Última auditoria: setembro de 2026.",
@@ -341,6 +345,7 @@ export default function App() {
           <header>
             <p className="eyebrow">{copy.letterKicker}</p>
             <h2 id="letter-title">{copy.letterTitle}</h2>
+            <p className="letter-lead">{copy.letterLead}</p>
           </header>
           <div className="letter-body">
             {copy.letterBody.map((paragraph) => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}
