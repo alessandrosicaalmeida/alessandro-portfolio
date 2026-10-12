@@ -1,3 +1,8 @@
+> **Current portfolio:** https://alessandro-portfolio.ai-controller.workers.dev/
+> This repository's GitHub Pages address redirects there. The live site (with
+> role-based selection, demos and case catalog) is built and published from a
+> separate source; this repository keeps the earlier public version for reference.
+
 # Alessandro Almeida — AI & Product Portfolio
 
 An evidence-led, bilingual portfolio for senior AI, product, transformation,
